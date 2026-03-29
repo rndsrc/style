@@ -30,9 +30,18 @@ style updates.
 
 ## Maintenance
 
-Task folders do not need a uniform file set.
-Add only the files that make the task easier for humans and LLMs to
-use.
+Task folders do not need a uniform file set. Add only the files that make
+the task easier for humans and LLMs to use.
 
 When adding liked writing, place it under `reference/<task>/` and use
 the `style-update` task to distill it into canonical guidance.
+
+
+## License
+
+Except for files under `reference/`, the reusable guidance, templates,
+documentation, and adapters in this repository are licensed under the
+Apache License, Version 2.0.
+Files under `reference/` are excluded from the Apache License unless a
+file there explicitly states otherwise.
+See `LICENSE` and `reference/LICENSE`.
