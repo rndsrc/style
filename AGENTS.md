@@ -19,6 +19,10 @@ This file tells agents what to do.
 * `task/` contains task-specific guidance.
 * `reference/` holds example writing for future updates.
   It is not used other than the `task/style-update` task.
+* Tool-specific adapter files are exports or setup helpers.
+  They are not separate style guidance.
+* Adapter snapshots may duplicate guidance for installation elsewhere.
+  The canonical files still win when there is a conflict.
 
 
 ## File Responsibilities
@@ -57,6 +61,18 @@ When applying the style:
    phrasing.
 
 
+## Adapter Policy
+
+* Treat `adapter/` as tool-specific exports and setup guides.
+* Do not make `adapter/` a separate style authority.
+* Keep adapters thin and traceable to `STYLE.md`, `common/`, and
+  `task/`.
+* When canonical guidance changes, update matching adapter text or
+  mark the adapter as needing regeneration.
+* If an adapter duplicates guidance, the canonical source wins.
+* Generated adapter snapshots should say what canonical files they mirror.
+
+
 ## Task Routing
 
 * Style evolution from liked source writing: use `task/style-update/`.
@@ -71,5 +87,6 @@ When applying the style:
 Before finalizing repository changes:
 
 * Run `git diff --check`.
+* Check for adapter references to files that do not exist.
 * Check `git status --ignored --short --untracked-files=all` for
   accidentally ignored adapter exports or local editor backups.

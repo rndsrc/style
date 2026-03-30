@@ -14,6 +14,7 @@ Canonical style guidance lives in `STYLE.md`, `common/`, and
 `task/<task>`.
 Use `reference/<task>` to store liked writing that can inform future
 style updates.
+Use `adapter/` only for tool-specific exports and setup notes.
 
 
 ## Layout
@@ -26,6 +27,8 @@ style updates.
                  task.
 * `task/`      : Task-specific folders for email, scientific writing,
                  code, project READMEs, and style updates.
+* `adapter/`   : Tool-specific exports for ChatGPT, Codex, Claude,
+                 Copilot, Cursor, and generic LLM use.
 
 
 ## Maintenance
