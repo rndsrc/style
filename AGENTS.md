@@ -5,8 +5,9 @@ These instructions apply to the whole repository.
 
 ## Purpose
 
-This repo defines how to write and code.
-Use it when drafting, rewriting, reviewing, or explaining work.
+Elements of LLM Style defines how to write and code.
+Use this repository when drafting, rewriting, reviewing, or explaining
+work.
 
 `README.md` is for humans.
 This file tells agents what to do.

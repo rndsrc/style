@@ -1,7 +1,7 @@
-# Style
+# Elements of LLM Style
 
-This repository is the source of truth for writing and code style.
-It is designed for humans to maintain style guidance and for AI tools
+Elements of LLM Style is the source of truth for writing and code style.
+It is designed for humans to maintain style guidance and for LLM tools
 to read before drafting, rewriting, reviewing, or explaining work.
 
 

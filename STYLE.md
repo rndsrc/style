@@ -1,6 +1,6 @@
-# Scientist Style
+# Elements of LLM Style
 
-The default scientist style is simple and direct.
+The default style in this repository is simple and direct.
 It prioritizes accuracy, clarity, and usefulness over fancy or wordy.
 
 This file defines the global voice.

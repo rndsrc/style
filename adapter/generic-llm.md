@@ -1,6 +1,7 @@
 # Generic LLM Adapter
 
-This adapter mirrors `STYLE.md` and `common/CHECK.md`.
+This adapter mirrors the Elements of LLM Style files `STYLE.md` and
+`common/CHECK.md`.
 If the repository files are available, use them instead.
 If this adapter conflicts with `STYLE.md`, `common/`, or `task/`, the
 canonical files win.
