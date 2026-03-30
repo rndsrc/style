@@ -1,93 +1,62 @@
-# AGENTS.md
+# Elements of LLM Style
 
-These instructions apply to the whole repository.
+`README.md` orients humans.
+This file tells agents what to read, edit, and validate.
 
+## Authority
 
-## Purpose
+Reusable writing style lives in `STYLE.md`, `common/`, and matching task folders.
+When guidance conflicts, use the narrowest source: matching task guidance, then `common/`, then `STYLE.md`.
+`README.md` orients humans.
+`AGENTS.md` files define operations.
+Adapter files are derived prompts, not style authority.
+Reference files are evidence, not style authority.
+`task/style-update/` is only for updating this repository.
+Files under `reference/` are private unless they explicitly say otherwise.
 
-Elements of LLM Style defines how to write and code.
-Use this repository when drafting, rewriting, reviewing, or explaining
-work.
+## Roles
 
-`README.md` is for humans.
-This file tells agents what to do.
+* `README.md`: human orientation, layout, and license summary.
+* `AGENTS.md`: agent loading, routing, maintenance, and validation.
+* `STYLE.md`: global writing principles, source boundaries, and Markdown conventions.
+* `common/LANGUAGE.md`: shared word and sentence guidance.
+* `common/CHECKLIST.md`: shared final checks.
+* `task/`: task-specific guidance and workflows.
+* `adapter/generic-llm.md`: derived portable prompt for tools that cannot read this repository.
+* `reference/`: private evidence and license notice.
 
+## Loading
 
-## Source Of Truth
+For writing tasks, read in this order:
 
-* `STYLE.md` defines the overall voice and judgment.
-* `common/` contains shared rules, tone guidance, and checks.
-* `task/` contains task-specific guidance.
-* `reference/` holds example writing for future updates.
-  It is not used other than the `task/style-update` task.
-* Tool-specific adapter files are exports or setup helpers.
-  They are not separate style guidance.
-* Adapter snapshots may duplicate guidance for installation elsewhere.
-  The canonical files still win when there is a conflict.
+1. `STYLE.md`.
+2. `common/LANGUAGE.md`.
+3. The narrowest matching `task/<task>/` folder, when it exists.
+4. `common/CHECKLIST.md` and any matching task checklist before final output.
+5. `adapter/generic-llm.md` only when the target tool needs a portable prompt.
 
+For repository updates, read in this order:
 
-## File Responsibilities
+1. `task/style-update/`.
+2. Current repository files that could own the update.
+3. `reference/` only when the update needs reference material or the user names a specific reference.
 
-Task folders may include:
+## Maintenance
 
-* `AGENTS.md`  : how to run the task
-* `STYLE.md`   : task-specific voice and rules
-* `PROMPT.md`  : reusable prompts
-* `REPORT.md`  : output structure (optional)
-* `RUBRIC.md`  : quality checks
-* `EXAMPLE.md` : real examples, only if useful
-
-Do not add files just for consistency.
-If something is missing, use the best available guidance.
-
-
-## Loading Order
-
-When applying the style:
-
-1. Read `STYLE.md`.
-2. If present, read `common/*.md`.
-3. If a relevant task folder exists, read exactly one relevant task
-   folder unless the user asks for a cross-task output.
-4. Within a task folder, prefer:
-   * `AGENTS.md` : procedure
-   * `STYLE.md`  : task voice
-   * `PROMPT.md` : reusable prompts
-   * `REPORT.md` : report template
-   * `RUBRIC.md` : final checks
-5. If the target task folder or a task file is missing, use the
-   closest available guidance and state the gap only when it affects
-   the result.
-6. Read `EXAMPLE.md` only when needed to resolve tone, structure, or
-   phrasing.
-
-
-## Adapter Policy
-
-* Treat `adapter/` as tool-specific exports and setup guides.
-* Do not make `adapter/` a separate style authority.
-* Keep adapters thin and traceable to `STYLE.md`, `common/`, and
-  `task/`.
-* When canonical guidance changes, update matching adapter text or
-  mark the adapter as needing regeneration.
-* If an adapter duplicates guidance, the canonical source wins.
-* Generated adapter snapshots should say what canonical files they mirror.
-
-
-## Task Routing
-
-* Style evolution from liked source writing: use `task/style-update/`.
-* General style rewriting: use `common/PROMPT.md` if present, then
-  choose the closest task folder if one applies.
-  If neither exists, use `STYLE.md`.
-* Do not use `task/style-update/` unless updating the style itself.
-
+* Put each directive in its narrowest owner.
+* Remove repeated directives from broader or derived files once a narrower owner exists.
+* Keep human orientation, use, layout, and license summaries in `README.md`.
+* Keep workflow instructions in `AGENTS.md` files and report templates in `REPORT.md` files.
+* Keep adapter files derived from reusable writing style, and refresh them whenever reusable style changes.
+* Keep source-specific evidence and private reference material in `reference/`.
+* Describe only real or intentionally reserved files and directories.
+* Add or keep a file only when it has a distinct role that reduces duplication, not for symmetry.
 
 ## Validation
 
-Before finalizing repository changes:
+Before finalizing repository changes, run these checks:
 
 * Run `git diff --check`.
-* Check for adapter references to files that do not exist.
-* Check `git status --ignored --short --untracked-files=all` for
-  accidentally ignored adapter exports or local editor backups.
+* Check that Markdown prose uses one sentence per physical line unless syntax requires otherwise.
+* Run `git status --ignored --short --untracked-files=all` and check for unintended or hidden files.
+* Report the checks run and any failures.

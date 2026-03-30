@@ -1,58 +1,45 @@
 # Elements of LLM Style
 
-The default style in this repository is simple and direct.
-It prioritizes accuracy, clarity, and usefulness over fancy or wordy.
+Write so readers can understand, decide, or act.
+Be factual, clear, concise, and explicit about limits.
+Keep reusable guidance in its narrowest owner: global principles here, shared language in `common/`, and task-specific guidance in `task/`.
 
-This file defines the global voice.
-It is not exhaustive.
-Use `common/` for shared checks, phrasing, tone boundaries, and reusable
-prompts.
-Use `task/<task>/` for task-specific guidance when applicable.
+## Principles
 
-Changes should be distilled through `task/style-update/` before they
-become guidance.
-
-
-## Core Voice
-
-* Lead with the point.
-* Make reasoning explicit when it affects understanding or decisions.
-* Use plain language unless technical terms add precision.
-* Prefer concrete nouns and active verbs.
-* State uncertainty explicitly.
-* Avoid filler (enthusiasm, apology, ceremonial framing).
-* Do not overclaim; qualify scope, assumptions, or evidence when
-  needed.
-
-
-## Structure
-
-* Put the answer or outcome first.
-* Use bullets for actions, constraints, or alternatives.
-* Keep headings short and functional.
-* Keep guidance concise and maintainable.
-
-
-## Reasoning Style
-
-* Separate fact, inference, and recommendation.
-* Surface tradeoffs when they matter.
-* Expose key assumptions, especially weak ones.
-* Focus on implications ("what follows"), not narrative.
-* When revising, resolve ambiguity before improving style.
-
+* Lead with the requested outcome or main point.
+* Preserve meaning, facts, intent, constraints, audience, and technical claims before polish.
+* Separate facts, inferences, and recommendations.
+* Match certainty to evidence.
+* State assumptions, uncertainty, limits, or scope when they matter.
+* Remove material that does not help the reader understand, decide, or act.
+* Match structure and detail to the task and audience.
+* Use headings and bullets when they improve scanning.
+* Prefer fewer, stronger points over exhaustive catalogs.
+* In revisions, move toward clearer and simpler statements.
+* Keep rewrites close to the requested scope and original length unless the task asks for expansion or compression.
+* End with the next useful action, decision point, or validation result when one exists.
 
 ## Source Boundaries
 
-* `STYLE.md` defines the default voice.
-* `common/` contains shared operational guidance.
-* `task/` contains task-specific overrides.
-* `reference/` contains evidence, not directly used when applying
-  style, only used in `task/style-update/`.
-* Do not generalize from private or example-specific content.
+Use `STYLE.md`, `common/*.md`, and matching task guidance as reusable writing style.
+Use `README.md` for repository orientation, not writing style.
+Use `AGENTS.md` files for agent operations, not writing style.
+Use `task/style-update/` for repository updates, not ordinary writing tasks.
+Use `adapter/` as derived application prompts, not style authority.
+Use `reference/` as indirect evidence, not reusable guidance.
+Reference-derived writing traits become guidance only after integration into `STYLE.md`, `common/*.md`, or a matching task folder.
+Reference-derived repository-operation traits become guidance only after integration into `README.md`, `AGENTS.md`, or a matching task workflow.
+Do not move private facts, names, data, project details, or protected source text into reusable guidance, adapters, templates, documentation, or generated public text.
+When adapting examples or protected sources, distill durable rules instead of copying sample prose.
 
+## Markdown Conventions
 
-## Convention
-
-* Use `*` for unordered Markdown lists.
-* Avoid `-` as a list marker unless required by tooling.
+Use `<name>` for required placeholders and `[name]` for optional placeholders.
+Use `*` for unordered Markdown lists.
+Prefer ASCII punctuation, especially quotation marks.
+Start each prose sentence on its own physical line.
+Do not hard-wrap a sentence across multiple lines.
+Keep one-sentence bullets on one line when practical.
+If a bullet has multiple sentences, start each sentence on its own aligned continuation line.
+Apply sentence-per-line formatting to plain-language prose inside fenced prompt blocks.
+Preserve syntax-sensitive content where line breaks carry meaning, including commands, tables, URLs, legal text, frontmatter, and externally specified tool syntax.

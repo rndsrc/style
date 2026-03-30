@@ -1,50 +1,28 @@
 # Elements of LLM Style
 
-Elements of LLM Style is the source of truth for writing and code style.
-It is designed for humans to maintain style guidance and for LLM tools
-to read before drafting, rewriting, reviewing, or explaining work.
+This repository is a compact guide for factual, clear, and concise LLM writing.
+Use it for drafting, rewriting, explanation, review, and code-facing prose.
 
+## Use
 
-## Usage
-
-For human orientation, read this file first.
-For agent use, start with `AGENTS.md`.
-
-Canonical style guidance lives in `STYLE.md`, `common/`, and
-`task/<task>`.
-Use `reference/<task>` to store liked writing that can inform future
-style updates.
-Use `adapter/` only for tool-specific exports and setup notes.
-
+* For writing, read `STYLE.md`, `common/LANGUAGE.md`, and the narrowest matching `task/<task>/` folder when it exists.
+* Before final output, apply `common/CHECKLIST.md` and any matching task checklist.
+* Use `task/style-update/` to update this repository.
+* Use `adapter/generic-llm.md` only for tools that cannot read this repository.
+* Treat `reference/` as private evidence until accepted traits are integrated into owning guidance.
 
 ## Layout
 
-* `AGENTS.md`  : Entry-point instructions for AI agents.
-* `STYLE.md`   : Cross-task voice and judgment.
-* `common/`    : Shared checks, phrase guidance, tone boundaries, and
-                 generic prompts.
-* `reference/` : Source writing the user currently likes, organized by
-                 task.
-* `task/`      : Task-specific folders for email, scientific writing,
-                 code, project READMEs, and style updates.
-* `adapter/`   : Tool-specific exports for ChatGPT, Codex, Claude,
-                 Copilot, Cursor, and generic LLM use.
-
-
-## Maintenance
-
-Task folders do not need a uniform file set. Add only the files that make
-the task easier for humans and LLMs to use.
-
-When adding liked writing, place it under `reference/<task>/` and use
-the `style-update` task to distill it into canonical guidance.
-
+* `README.md`: human orientation, layout, and license summary.
+* `AGENTS.md`: agent loading, routing, maintenance, and validation.
+* `STYLE.md`: global principles, source boundaries, and Markdown conventions.
+* `common/`: shared language guidance and final checklist.
+* `task/style-update/`: workflow for updating this repository from instructions, current guidance, examples, or references.
+* `adapter/generic-llm.md`: derived portable prompt.
+* `reference/`: private evidence and license notice.
 
 ## License
 
-Except for files under `reference/`, the reusable guidance, templates,
-documentation, and adapters in this repository are licensed under the
-Apache License, Version 2.0.
-Files under `reference/` are excluded from the Apache License unless a
-file there explicitly states otherwise.
+Everything outside `reference/` is Apache-2.0.
+Files under `reference/` are private unless they explicitly say otherwise.
 See `LICENSE` and `reference/LICENSE`.
