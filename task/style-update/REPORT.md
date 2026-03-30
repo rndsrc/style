@@ -1,40 +1,42 @@
 # Style Update Report
 
-Use this structure when reporting a style update derived from
-references.
+Use this structure in the final response unless the user asks for a report file.
 
-## Target Task
+## Target
 
-* `<task>`:
+* Layer, `<task>`, or repository boundary:
+* Reference scope:
+* Reference-to-task map:
+* Owning files:
 
-## Sources Read
+## Sources
 
-* `reference/<task>/<file>` or user-provided source: brief reason it
-  matters.
+* Direct user instruction:
+* Current guidance:
+* Reference material:
+* Inferred traits:
 
-## Traits Accepted
+## Decisions
 
-* Durable style trait.
-* Evidence summary without copying long passages or private facts.
+* Accepted trait and owning file:
+* Rejected or deferred:
+* Task-specific versus shared scope:
+* Cross-task promotion:
 
-## Traits Rejected Or Deferred
+## Changes
 
-* Trait, habit, or conflict not promoted into guidance.
-* Reason it was rejected, deferred, or left ambiguous.
+* `README.md`: changed, unchanged, or deferred with reason.
+* `AGENTS.md`: changed, unchanged, or deferred with reason.
+* `STYLE.md`: changed, unchanged, or deferred with reason.
+* `common/*.md`: changed, unchanged, or deferred with reason.
+* `task/<task>/*.md`: changed, unchanged, or deferred with reason.
+* `adapter/generic-llm.md`: refreshed, unchanged, or deferred with reason.
 
-## Canonical Changes
+## Limits
 
-* File changed: summary of what changed and why.
-
-## Conflicts or Limits
-
-* Conflicting references, stale examples, or unclear preferences.
-
-## Follow-Up
-
-* Optional next step, adapter update, or open question.
+* Conflicting sources, stale examples, unclear preferences, or source limits.
 
 ## Validation
 
-* Checks run.
-* Result.
+* Checks:
+* Result:
