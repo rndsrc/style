@@ -7,6 +7,7 @@ Use this file for shared word choice and sentence-level edits.
 * Concrete nouns, named actors, and strong verbs.
 * Direct openings over throat-clearing.
 * Specific, qualified claims over broad assertions.
+* Exact dates or source dates over vague recency words when time matters.
 * Reasons and criteria over cue words.
 * Common words unless precision requires a technical term.
 
@@ -19,6 +20,7 @@ Use this file for shared word choice and sentence-level edits.
 * Weak intensifiers such as "very", "really", "quite", "somewhat", "basically", and "kind of".
 * Unqualified rankings.
 * Certainty words that outrun the evidence.
+* Unsupported references to "recent", "current", "latest", or "today".
 
 ## Sentence Checks
 
@@ -29,3 +31,4 @@ Use this file for shared word choice and sentence-level edits.
 * Keep related words close together.
 * Split paragraphs when the topic changes.
 * Keep the sharper sentence when two sentences make the same point.
+* Replace vague source mentions with named sources, source IDs, or honest statements that the source was not checked when support matters.

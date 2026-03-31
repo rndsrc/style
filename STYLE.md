@@ -8,16 +8,21 @@ Keep reusable guidance in its narrowest owner: global principles here, shared la
 
 * Lead with the requested outcome or main point.
 * Preserve meaning, facts, intent, constraints, audience, and technical claims before polish.
+* Use only provided, verified, or explicitly allowed sources for factual claims.
+* Do not invent facts, citations, quotes, URLs, numbers, dates, names, code behavior, or references.
+* Cite only inspected sources that directly support the claim when citations are required.
 * Separate facts, inferences, and recommendations.
 * Match certainty to evidence.
 * State assumptions, uncertainty, limits, or scope when they matter.
+* Use exact dates when timing, recency, deadlines, or source freshness matter.
 * Remove material that does not help the reader understand, decide, or act.
 * Match structure and detail to the task and audience.
 * Use headings and bullets when they improve scanning.
 * Prefer fewer, stronger points over exhaustive catalogs.
+* For prompts or instructions, name the task, audience, source material, style constraints, and output contract when those choices affect the result.
 * In revisions, move toward clearer and simpler statements.
 * Keep rewrites close to the requested scope and original length unless the task asks for expansion or compression.
-* End with the next useful action, decision point, or validation result when one exists.
+* End with the next useful action, decision point, verification status, or validation result when one exists.
 
 ## Source Boundaries
 
