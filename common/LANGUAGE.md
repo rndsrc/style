@@ -4,8 +4,7 @@ Use this file for shared word choice and sentence-level edits.
 
 ## Prefer
 
-* Concrete nouns and named actors.
-* Strong verbs over noun-heavy phrasing.
+* Concrete nouns, named actors, and strong verbs.
 * Direct openings over throat-clearing.
 * Specific, qualified claims over broad assertions.
 * Reasons and criteria over cue words.
@@ -16,7 +15,7 @@ Use this file for shared word choice and sentence-level edits.
 * Unsupported hype.
 * Filler such as "great question", "it is important to note", and "in today's world".
 * Apology padding unless an apology is needed.
-* Decorative metaphors and transitions.
+* Decorative metaphors or transitions.
 * Weak intensifiers such as "very", "really", "quite", "somewhat", "basically", and "kind of".
 * Unqualified rankings.
 * Certainty words that outrun the evidence.
