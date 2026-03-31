@@ -8,7 +8,9 @@ Use it for drafting, rewriting, explanation, review, and code-facing prose.
 * For writing, read `STYLE.md`, `common/LANGUAGE.md`, and the narrowest matching `task/<task>/` folder when it exists.
 * Before final output, apply `common/CHECKLIST.md` and any matching task checklist.
 * Use `task/style-update/` to update this repository.
-* Use `adapter/generic-llm.md` only for tools that cannot read this repository.
+* Use `adapter/` only for AI tool setup and shared skill packaging; adapters and skill files are not style authority.
+* Prefer setups where the tool can read this full repository.
+* Fork or copy this repository to create a custom style profile.
 * Treat `reference/` as private evidence until accepted traits are integrated into owning guidance.
 
 ## Layout
@@ -18,7 +20,7 @@ Use it for drafting, rewriting, explanation, review, and code-facing prose.
 * `STYLE.md`: global principles, source boundaries, and Markdown conventions.
 * `common/`: shared language guidance and final checklist.
 * `task/style-update/`: workflow for updating this repository from instructions, current guidance, examples, or references.
-* `adapter/generic-llm.md`: derived portable prompt.
+* `adapter/`: setup prompts for different AI tools.
 * `reference/`: private evidence and license notice.
 
 ## License

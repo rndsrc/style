@@ -13,7 +13,7 @@ They become guidance only after integration into owning repository files.
 * `common/LANGUAGE.md`: shared word choice and sentence guidance.
 * `common/CHECKLIST.md`: shared final checks.
 * `task/<task>/*.md`: task-specific guidance or workflows.
-* `adapter/generic-llm.md`: derived prompt for tools that cannot read this repository.
+* `adapter/`: derived setup prompts and shared skill packaging for tools that should read this full repository.
 * `reference/`: private evidence and license notice.
 
 ## Style Targets
@@ -51,7 +51,7 @@ Route reference material by path before extracting traits:
 * Separate direct user instruction, current guidance, reference evidence, and inferred traits.
 * Identify conflicts, duplication, stale routing, and unclear ownership.
 * Extract only durable traits that can guide future work.
-* Keep private facts, source-specific details, and protected wording out of guidance.
+* Keep private facts, names, data, project details, and protected wording out of guidance, skill files, and adapters.
 * Map every accepted trait to its narrowest owner in the owner map.
 * Use the reference routing rules before changing `STYLE.md`, `common/*.md`, or `task/<task>/*.md`.
 * Put reference-derived writing style only in `STYLE.md`, `common/*.md`, or `task/<task>/*.md`.
@@ -60,8 +60,10 @@ Route reference material by path before extracting traits:
 * Edit only files whose roles own accepted traits.
 * Remove repeated or stale rules from less appropriate files.
 * Verify that each reference-derived trait landed in an owning repository file before treating it as usable guidance.
-* Refresh `adapter/generic-llm.md` when reusable writing style changes.
-* Make the adapter describe the current writing style and intended applications, not the update workflow or private evidence.
+* Refresh affected `adapter/` and adapter setup files when reusable writing style, source boundaries, or loading rules change.
+* Make adapters describe current writing style, repository loading, and intended applications, not the update workflow or private evidence.
+* Keep adapters profile-neutral: avoid hard-coded repository names, personal names, and voice labels unless a target tool requires a display label.
+* Make adapters prefer full-repository access and fall back to `adapter/generic-llm.md` only when the tool cannot read files.
 * For broad rewrites, repeat read, edit, and check passes until another pass would only be cosmetic.
 * Use `REPORT.md` only when the update needs a structured report or the user asks for one.
 

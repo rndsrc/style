@@ -10,7 +10,7 @@ Also apply matching task checklists.
 * Language follows `common/LANGUAGE.md`.
 * The structure matches the audience and task.
 * Filler, hype, apology padding, and decorative transitions are removed.
-* Private facts, source-specific evidence, and protected source text stayed out of reusable guidance, adapters, and public output.
+* Private facts, names, data, project details, and protected source text stayed out of reusable guidance, skill files, adapters, and public output.
 * The narrowest matching task guidance was used when it exists.
 * Markdown prose uses sentence-per-line formatting and `*` unordered lists unless syntax requires different formatting.
 * Syntax-sensitive content, legal text, URLs, tables, commands, and externally specified tool syntax were preserved.

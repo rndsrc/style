@@ -30,7 +30,7 @@ Use this structure in the final response unless the user asks for a report file.
 * `STYLE.md`: changed, unchanged, or deferred with reason.
 * `common/*.md`: changed, unchanged, or deferred with reason.
 * `task/<task>/*.md`: changed, unchanged, or deferred with reason.
-* `adapter/generic-llm.md`: refreshed, unchanged, or deferred with reason.
+* `adapter/`: refreshed, unchanged, or deferred with reason.
 
 ## Limits
 

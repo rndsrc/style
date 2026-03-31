@@ -10,6 +10,7 @@ When guidance conflicts, use the narrowest source: matching task guidance, then 
 `README.md` orients humans.
 `AGENTS.md` files define operations.
 Adapter files are derived prompts, not style authority.
+If an adapter conflicts with repository guidance, use `STYLE.md`, `common/`, the matching `task/` folder, or `AGENTS.md`.
 Reference files are evidence, not style authority.
 `task/style-update/` is only for updating this repository.
 Files under `reference/` are private unless they explicitly say otherwise.
@@ -22,7 +23,7 @@ Files under `reference/` are private unless they explicitly say otherwise.
 * `common/LANGUAGE.md`: shared word and sentence guidance.
 * `common/CHECKLIST.md`: shared final checks.
 * `task/`: task-specific guidance and workflows.
-* `adapter/generic-llm.md`: derived portable prompt for tools that cannot read this repository.
+* `adapter/`: derived setup prompts for tools that should read this full repository.
 * `reference/`: private evidence and license notice.
 
 ## Loading
@@ -33,7 +34,7 @@ For writing tasks, read in this order:
 2. `common/LANGUAGE.md`.
 3. The narrowest matching `task/<task>/` folder, when it exists.
 4. `common/CHECKLIST.md` and any matching task checklist before final output.
-5. `adapter/generic-llm.md` only when the target tool needs a portable prompt.
+5. A matching `adapter/` file only when the target tool needs setup instructions or a portable prompt.
 
 For repository updates, read in this order:
 
@@ -47,7 +48,10 @@ For repository updates, read in this order:
 * Remove repeated directives from broader or derived files once a narrower owner exists.
 * Keep human orientation, use, layout, and license summaries in `README.md`.
 * Keep workflow instructions in `AGENTS.md` files and report templates in `REPORT.md` files.
-* Keep adapter files derived from reusable writing style, and refresh them whenever reusable style changes.
+* Keep adapter files derived from reusable writing style and repository loading rules.
+* Keep adapters profile-neutral: avoid hard-coded repository names, personal names, and voice labels unless a target tool requires a display label.
+* Make adapters prefer full-repository access and fall back to `adapter/generic-llm.md` only when the tool cannot read files.
+* Refresh affected adapters whenever reusable style, source boundaries, or loading rules change.
 * Keep source-specific evidence and private reference material in `reference/`.
 * Describe only real or intentionally reserved files and directories.
 * Add or keep a file only when it has a distinct role that reduces duplication, not for symmetry.

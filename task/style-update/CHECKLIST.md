@@ -24,10 +24,12 @@ Before finalizing a style update:
 * Root `AGENTS.md` was updated when the trait affected agent loading, routing, maintenance, or validation.
 * Conflicts between sources were resolved or reported.
 * Repetition, conflicts, stale routing, and unclear ownership were removed or reported.
-* Reference facts, private details, and protected source text stayed out of reusable guidance and adapters.
-* `task/style-update/` and `adapter/` were not treated as style authority outside their own roles.
+* Private facts, names, data, project details, and protected source text stayed out of reusable guidance, skill files, and adapters.
+* `task/style-update/` and adapter setup files were not treated as style authority outside their own roles.
 * No unused file or path was added or described only for symmetry.
-* `adapter/generic-llm.md` describes the current writing style and intended applications, or the reason was reported.
+* `adapter/skill/` stayed tool-independent and free of tool-specific metadata.
+* Affected `adapter/` files describe the current writing style, repository loading, intended applications, and full-repository preference, or the reason was reported.
+* Affected `adapter/` files avoid hard-coded repository names, personal names, and voice labels unless a target tool requires a display label.
 * A second pass found no substantive conflict, duplication, or ownership problem.
 * The guidance is compact enough for a human or less capable LLM to follow.
 * `common/CHECKLIST.md` was applied.
