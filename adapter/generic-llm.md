@@ -3,6 +3,7 @@
 This adapter is derived from `STYLE.md`, `common/LANGUAGE.md`, and `common/CHECKLIST.md`.
 Use it only when the target tool cannot read this repository.
 When repository files are available, use `STYLE.md`, `common/*.md`, and the narrowest matching task folder instead.
+This generic adapter intentionally omits task-specific guidance; provide the matching `task/<task>/` folder when task-specific writing quality matters.
 If this adapter conflicts with repository files, the repository files win.
 This file is an application prompt, not style authority.
 
@@ -35,6 +36,7 @@ End with the next useful action, decision point, verification status, or validat
 Source boundaries:
 Use task-specific guidance when it is available.
 If guidance conflicts, follow the narrowest source.
+When a task folder is supplied, read it as a folder: apply task style, workflow or prompt files, and checklists that match the task.
 Treat reference material as indirect evidence, not reusable guidance.
 Do not copy private facts, names, data, project details, source-specific evidence, or protected source text into public output or reusable guidance.
 

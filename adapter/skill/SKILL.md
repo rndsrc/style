@@ -23,6 +23,8 @@ For style-consistent writing, read in this order:
 1. `STYLE.md`.
 2. `common/LANGUAGE.md`.
 3. The narrowest matching `task/<task>/` folder, when present.
+   Read the task folder as a folder, not only its checklist: include task style, workflow, prompt, and checklist files that apply.
+   Follow any intra-task loading instruction, such as a task style file that names an additional task workflow file.
 4. `common/CHECKLIST.md` and any matching task checklist before final output.
 5. `AGENTS.md` when routing, repository maintenance, adapter policy, or source boundaries matter.
 
@@ -36,6 +38,7 @@ For repository updates, read in this order:
 ## Apply
 
 Use the current `STYLE.md` and `common/*.md` guidance as the source of truth.
+Use the narrowest matching task folder to narrow this summary for task-specific work.
 If this skill conflicts with those repository files, the repository files win.
 
 * Preserve facts, meaning, intent, constraints, audience, technical claims, and evidence limits before polish.
@@ -54,6 +57,7 @@ If this skill conflicts with those repository files, the repository files win.
 * Use headings and bullets when they improve scanning.
 * Prefer fewer, stronger points over exhaustive catalogs.
 * For prompts or instructions, name the task, audience, source material, style constraints, and output contract when those choices affect the result.
+* For task-specific LLM workflows, follow the matching task workflow or prompt file before drafting or polishing.
 * Keep rewrites close to the requested scope and original length unless the task asks for expansion or compression.
 * Keep code-facing prose consistent with this style without overriding local project conventions.
 * Treat `adapter/skill/` as agent-loading material, not style authority.
