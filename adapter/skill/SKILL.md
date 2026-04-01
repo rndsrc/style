@@ -68,7 +68,7 @@ If this skill conflicts with those repository files, the repository files win.
 
 ## Final Check
 
-Apply `common/CHECKLIST.md` before final output.
+Apply `common/CHECKLIST.md` and any matching task checklist before final output.
 Check factual support, citation support, date freshness, language, task fit, source boundaries, Markdown conventions, and anything not verified, sourced, or tested.
 If repository style files changed, run the validation checks required by `AGENTS.md`.
 Report validation honestly, including skipped checks, unavailable source files, and anything not verified, sourced, or tested when that matters.

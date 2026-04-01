@@ -18,7 +18,7 @@ Use it for drafting, rewriting, explanation, review, and code-facing prose.
 * `AGENTS.md`: agent loading, routing, maintenance, and validation.
 * `STYLE.md`: global principles, source boundaries, and Markdown conventions.
 * `common/`: shared language guidance and final checklist.
-* `task/style-update/`: workflow for updating this repository from instructions, current guidance, examples, or references.
+* `task/`: task-specific guidance, checklists, and workflows, including the style-update workflow.
 * `adapter/`: AI tool setup prompts and shared skill packaging.
 * `reference/`: private evidence and license notice.
 
